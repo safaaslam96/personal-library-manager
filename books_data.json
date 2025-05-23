@@ -1,0 +1,44 @@
+[
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "year": "1925",
+        "genre": "Classic",
+        "read": true
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "year": "1960",
+        "genre": "Historical Fiction",
+        "read": false
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "year": "1949",
+        "genre": "Dystopian",
+        "read": true
+    },
+    {
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "year": "1813",
+        "genre": "Romance",
+        "read": false
+    },
+    {
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "year": "1951",
+        "genre": "Fiction",
+        "read": true
+    },
+    {
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "year": "1932",
+        "genre": "Science Fiction",
+        "read": true
+    }
+]
