@@ -5,28 +5,21 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="📚 Personal Library", layout="wide")
 
-# ---------- Custom Styling ----------
 st.markdown("""
 <style>
-/* App background gradient: pink theme */
+/* Pink theme background */
 .stApp {
     background: linear-gradient(to right, #8e2de2, #c06c84);
 }
-
-/* Sidebar container */
 section[data-testid="stSidebar"] {
     background-color: #ffe6f0 !important;
     animation: slideIn 1.5s ease-out;
     color: #4b004b;
 }
-
-/* Slide-in animation */
 @keyframes slideIn {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(0); }
 }
-
-/* Option menu container box with pink gradient */
 section[data-testid="stSidebar"] ul {
     background: linear-gradient(135deg, #9d50bb, #6e48aa);
     border-radius: 16px;
@@ -35,8 +28,6 @@ section[data-testid="stSidebar"] ul {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-
-/* Menu items */
 .nav-link {
     color: #f8e1ff !important;
     border-radius: 12px;
@@ -47,15 +38,11 @@ section[data-testid="stSidebar"] ul {
     align-items: center;
     gap: 8px;
 }
-
-/* Hover effect */
 .nav-link:hover {
     background: rgba(248, 225, 255, 0.15);
     transform: translateX(6px);
     box-shadow: 0 0 10px rgba(248, 225, 255, 0.3);
 }
-
-/* Selected item — pink gradient */
 div[data-testid="stSidebar"] ul > li > a.nav-link.active {
     background: linear-gradient(to right, #7b2ff7, #f107a3) !important;
     color: #fff !important;
@@ -65,34 +52,24 @@ div[data-testid="stSidebar"] ul > li > a.nav-link.active {
     box-shadow: 0 0 12px rgba(241, 7, 163, 0.6);
     transition: all 0.3s ease;
 }
-
-/* Icon styles */
 .nav-link i {
     transition: transform 0.6s ease, color 0.3s ease;
     display: inline-block;
     font-size: 1.2em;
     color: #f8e1ff !important;
 }
-
-/* Hover icon */
 .nav-link:hover i {
     transform: rotate(10deg) scale(1.1);
     color: #fff !important;
 }
-
-/* Spin animation for selected icon */
 div[data-testid="stSidebar"] ul > li > a.nav-link.active i {
     animation: spin 1.5s linear infinite;
     color: #fff !important;
 }
-
-/* Spin keyframes */
 @keyframes spin {
     0% { transform: rotate(0deg);}
     100% { transform: rotate(360deg);}
 }
-
-/* Mobile tweaks: smaller padding and font */
 @media (max-width: 768px) {
     section[data-testid="stSidebar"] ul {
         padding: 0.3rem;
@@ -108,8 +85,6 @@ div[data-testid="stSidebar"] ul > li > a.nav-link.active i {
 </style>
 """, unsafe_allow_html=True)
 
-
-# ---------- Book Manager Class ----------
 class BookManager:
     def __init__(self, filepath='books_data.json'):
         self.filepath = filepath
@@ -164,8 +139,6 @@ class BookManager:
         except:
             return False
 
-
-# ---------- App Logic ----------
 manager = BookManager()
 
 with st.sidebar:
